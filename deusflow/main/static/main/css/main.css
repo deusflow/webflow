@@ -1,0 +1,68 @@
+body{
+    background: #2c2c2c;
+}
+aside{
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+span.logo {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-weight: bold;
+    color: #fcafed;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+h3{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+aside ul{list-style: none}
+
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .3s ease;
+}
+aside ul li:hover, aside ul li a:hover{
+    color: #10d3ef;
+    text-decoration: none;
+    transform: scale(1.15);
+}
+
+main .features{
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 80%;
+}
+main .features h1{
+    font-size: 50px;
+}
+main .features p{
+    max-width: 400px;
+    margin: 20px auto;
+}
