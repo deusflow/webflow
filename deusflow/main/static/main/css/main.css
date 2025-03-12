@@ -48,7 +48,7 @@ aside ul li{
 }
 aside ul li:hover, aside ul li a:hover{
     color: #10d3ef;
-    text-decoration: none;
+    text-decoration: none !important;
     transform: scale(1.15);
 }
 
@@ -65,4 +65,7 @@ main .features h1{
 main .features p{
     max-width: 400px;
     margin: 20px auto;
+}
+aside ul a {
+    text-decoration: none !important;
 }
