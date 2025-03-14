@@ -8,8 +8,11 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque beatae debitis est exercitationem ipsum minus quidem velit? Adipisci deserunt expedita fuga iure molestias non odio porro quidem sapiente ullam.</p>
     <button class="btn btn-warning">About Me</button>
 
-{% for el in values %}
-<p>{{ el }}</p>
-{% endfor %}
+    {% for el in newsflow %}
+    <div class="alert alert-warning">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.anons }}</p>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
