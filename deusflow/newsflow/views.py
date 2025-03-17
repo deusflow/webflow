@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Articles
+from .forms import ArticleForm
 
 # Create your views here.
 def newsflow_home(request):
@@ -7,4 +8,10 @@ def newsflow_home(request):
     return render(request,'newsflow/newsflow_home.html',{'newsflow':news})
 
 def create(request):
-    return render(request, 'newsflow/create.html')
+    form = ArticleForm()
+
+    data = {
+        'form': form
+    }
+
+    return render(request, 'newsflow/create.html', data)

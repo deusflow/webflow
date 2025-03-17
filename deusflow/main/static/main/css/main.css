@@ -69,3 +69,10 @@ main .features p{
 aside ul a {
     text-decoration: none !important;
 }
+
+form{
+    margin-top: 100px;
+    width: 500px;
+    margin-left: 32%;
+
+}
