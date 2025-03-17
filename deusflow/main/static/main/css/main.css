@@ -74,5 +74,9 @@ form{
     margin-top: 100px;
     width: 500px;
     margin-left: 32%;
+}
 
+.alert-warning {
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы */
 }
