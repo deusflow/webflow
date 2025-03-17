@@ -1,11 +1,11 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}News About Me{% endblock %}
+{% block title %}News, It and Me{% endblock %}
 
 {% block content %}
 <div class="features">
    <h1>News About Me</h1>
-    <p>I'm passionate about coding and constantly learning new technologies. Recently, I earned a certification in relational databases and have been diving deep into Python and C#.
+    <p class="textlong">I'm passionate about coding and constantly learning new technologies. Recently, I earned a certification in relational databases and have been diving deep into Python and C#.
         I enjoy solving complex problems, building efficient systems, and exploring the world of IT infrastructure.
         My goal is to grow as a developer and make a real impact in the tech industry.</p>
     <button class="btn btn-warning">About Me</button><br>
@@ -14,6 +14,7 @@
     <div class="alert alert-warning text-center mx-auto" style="width: 80%;">
         <h3>{{ el.title }}</h3>
         <p>{{ el.anons }}</p>
+    <a href="{% url 'newsflow_detail' el.id %}" class="btn btn-warning">Read More</a>
     </div>
     {% endfor %}
 </div>

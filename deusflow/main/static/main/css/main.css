@@ -1,34 +1,41 @@
 body{
     background: #2c2c2c;
 }
-aside{
-    float: left;
+aside {
+    position: fixed;  /* make the panel fixed */
+    top: 0;
+    left: 0;
     background: #181818;
     width: 20%;
     padding: 2.5%;
     height: 100vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
+    z-index: 10;  /* to keep the panel on the top-content*/
+}
+
+main {
+    margin-left: 20%;  /* adding margin, so that the main content does not block the panel */
+    padding: 2%;
+    overflow-y: auto;  /* This will allow you to scroll through the content -  main */
+    height: 100vh;  /*Limit the height so that only the content is accessible when scrolling*/
 }
 
 .logo{
     width: 100px;
     height: auto;
-    align-content: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
+
 span.logo {
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     font-weight: bold;
     color: #fcafed;
     text-align: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 100%;
     margin: 0 auto;
 }
@@ -52,31 +59,69 @@ aside ul li:hover, aside ul li a:hover{
     transform: scale(1.15);
 }
 
-main .features{
-    float: left;
+main .features {
     color: #fff;
     margin-top: 100px;
-    text-align: center;
-    width: 80%;
+    text-align: center;  /* centring text */
+    width: 100%;  /* remove float */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 main .features h1{
     font-size: 50px;
 }
 main .features p{
-    max-width: 400px;
+    max-width: 800px;
     margin: 20px auto;
 }
 aside ul a {
     text-decoration: none !important;
 }
 
-form{
-    margin-top: 100px;
-    width: 500px;
-    margin-left: 32%;
+form {
+    margin-top: 100px; /* Отступ сверху */
+    width: 700px; /* Ширина формы */
+    margin: 0 auto; /* Центрирование формы по горизонтали */
 }
 
 .alert-warning {
-    border-radius: 10px; /* Скругление углов */
-    padding: 20px; /* Отступы */
+    border-radius: 10px; /* rounding of corners */
+    padding: 20px;
 }
+.youtube-video {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 560px; /* ограничиваем ширину */
+    margin: 20px auto; /* отступ сверху и снизу, центрирование */
+    border-radius: 15px; /* скругление углов */
+    overflow: hidden; /* чтобы видео не выходило за рамки */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* тень для объема */
+    border: 3px solid #10d3ef; /* стильная рамка с голубым цветом */
+}
+
+.youtube-video::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 20px;
+    border: 2px solid #fcafed; /* еще одна рамка для эффекта */
+    z-index: -1; /* поместить позади видео */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* дополнительная тень */
+}
+
+.btn-warning {
+    background-color: #fcafed; /* Выбирай нужный цвет */
+    border-color: #fcafed; /* Если нужно изменить цвет рамки */
+}
+
+.btn-warning:hover {
+    background-color: #10d3ef; /* Цвет кнопки при наведении */
+    border-color: #10d3ef; /* Цвет рамки при наведении */
+}
+

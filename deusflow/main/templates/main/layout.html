@@ -15,13 +15,13 @@
 <aside>
     <img class="logo" src="{% static 'main/img/23714.svg' %}" alt="Logo">
     <span class="logo"> DeusFlow </span>
-    <h3> Navigation</h3>
+    <h3> Navigation:</h3>
     <ul>
         <a href="{% url 'Home' %}"><li><i class="fa-solid fa-house-chimney-medical"></i> General</li></a>
         <a href="{% url 'About' %}"><li><i class="fa-solid fa-address-card"></i> About Me</li></a>
         <a href=""><li><i class="fa-solid fa-headset"></i> My Contact</li></a>
-        <a href="{% url 'newsflow_home' %}"><li><i class="fa-brands fa-github-alt"></i> My Projects</li></a>
-        <a href="{% url 'create'%}"><li><button class="btn btn-info"><i> Add Something</i></li></a>
+        <a href="{% url 'newsflow_home' %}"><li><i class="fa-brands fa-github-alt"></i> News from Me</li></a>
+        <li><a href="{% url 'create'%}"><button class="btn btn-info"><i> Add Something</i></button></a></li>
     </ul>
 </aside>
 <main>
