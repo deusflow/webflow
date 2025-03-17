@@ -13,5 +13,5 @@ class ArticleForm(ModelForm):
                                       "placeholder": 'Anons...'}),
             "full_text": Textarea(attrs={'class': 'form-control',
                                           "placeholder": 'Full Text...'}),
-            "date": DateTimeInput(attrs={'class': 'form-control'}),
+            "date": DateTimeInput(attrs={'class': 'form-control', "placeholder": 'select the publication date.'}),
 }
