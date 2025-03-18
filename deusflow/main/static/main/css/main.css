@@ -168,3 +168,6 @@ form {
     width: 100%;  /* occupies the entire width of the container */
     display: block;  /* Обеспечивает, что параграф будет вести себя как блоковый элемент */
 }
+.center-text {
+  text-align: center;
+}
