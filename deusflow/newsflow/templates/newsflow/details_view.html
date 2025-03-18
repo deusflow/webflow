@@ -5,7 +5,12 @@
 {% block content %}
 <div class="features">
    <h1>{{ article.title }}</h1>
-    <p>{{ article.full_text}}</p>
+    <p class="justify-text">{{ article.full_text }}</p>
     <p>{{ article.date }}</p>
 </div>
+
+     <div class="button-group">
+        <a href="{% url 'newsflow_delete' article.id %}" class="btn btn-danger">DELETE</a>
+        <a href="{% url 'newsflow_update' article.id %}" class="btn btn-info">Edit</a>
+    </div>
 {% endblock %}

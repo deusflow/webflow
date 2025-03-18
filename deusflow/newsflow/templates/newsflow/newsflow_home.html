@@ -12,10 +12,10 @@
     <br>
     {% for el in newsflow %}
     <div class="alert alert-warning text-center mx-auto" style="width: 80%;">
-        <h3>{{ el.title }}</h3>
-        <p>{{ el.anons }}</p>
+    <h3>{{ el.title }}</h3>
+    <p class="justify-text">{{ el.anons }}</p>
     <a href="{% url 'newsflow_detail' el.id %}" class="btn btn-warning">Read More</a>
-    </div>
+</div>
     {% endfor %}
 </div>
 {% endblock %}
